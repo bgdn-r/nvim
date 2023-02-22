@@ -1,0 +1,3 @@
+# Personal NeoVim setup
+Install NeoVim and Packer and copy everything in this repository to ~/.config/nvim/ \
+After that start NeoVim...
