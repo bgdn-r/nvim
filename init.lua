@@ -6,3 +6,9 @@ function set_cwd_to_buffer_dir()
   local buffer_dir = vim.fn.fnamemodify(buffer_file_name, ":h")
   os.execute("cd " .. buffer_dir)
 end
+
+vim.filetype.add {
+  extension = {
+    tf = "terraform",
+  }
+}

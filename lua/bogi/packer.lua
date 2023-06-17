@@ -12,11 +12,16 @@ return require('packer').startup(function(use)
 	use 'numToStr/Comment.nvim'
 	use 'windwp/nvim-autopairs'
 	use 'sharkdp/fd'
+	use 'folke/zen-mode.nvim'
 	use 'nvim-tree/nvim-web-devicons'
 	use 'mbbill/undotree'
-	use {'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons'}
-	use {'folke/trouble.nvim', requires = 'nvim-tree/nvim-web-devicons'}
-	use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
+	-- use { 'nvim-tree/nvim-tree.lua', requires = 'nvim-tree/nvim-web-devicons' }
+	use 'mortepau/codicons.nvim'
+	use { 'nvim-tree/nvim-tree.lua', requires = 'mortepau/codicons.nvim' }
+	-- use {'folke/trouble.nvim', requires = 'nvim-tree/nvim-web-devicons'}
+	-- use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
+	use { 'folke/trouble.nvim', requires = 'mortepau/codicons.nvim' }
+	use { 'romgrk/barbar.nvim', wants = 'mortepau/codicons.nvim' }
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
@@ -63,5 +68,4 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope-fzf-native.nvim',
 		run = 'make', cond = vim.fn.executable 'make' == 1
 	}
-
 end)

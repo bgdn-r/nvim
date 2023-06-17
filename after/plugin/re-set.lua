@@ -15,6 +15,7 @@
 --vim.opt.softtabstop = 4
 --vim.opt.expandtab = true
 --vim.o.completeopt = "menuone,noselect"
+vim.api.nvim_set_option("colorcolumn", "80")
 vim.api.nvim_set_option("hlsearch", false)
 vim.api.nvim_set_option("relativenumber", true)
 vim.api.nvim_set_option("number", true)
@@ -28,8 +29,9 @@ vim.api.nvim_set_option("signcolumn", "yes")
 vim.api.nvim_set_option("guicursor", "")
 vim.api.nvim_set_option("wrap", false)
 vim.api.nvim_set_option("scrolloff", 8)
-vim.api.nvim_set_option("tabstop", 4)
-vim.api.nvim_set_option("softtabstop", 4)
+vim.api.nvim_set_option("tabstop", 8)
+vim.api.nvim_set_option("softtabstop", 8)
 vim.api.nvim_set_option("expandtab", true)
 vim.api.nvim_set_option("completeopt", "menuone,noselect")
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.api.nvim_exec("set guicursor=a:block", false)
