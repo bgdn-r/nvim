@@ -1,43 +1,42 @@
 local actions = require('telescope.actions')
+local builtin = require("telescope.builtin")
+local themes = require("telescope.themes")
+
 require('telescope').setup {
-	defaults = {
-		mappings = {
-			i = {
-				['<C-u>'] = false,
-				['<C-d>'] = false,
-				['<C-j>'] = actions.move_selection_previous,
-				['<C-k>'] = actions.move_selection_next,
-			},
-		},
-	},
+    defaults = {
+        mappings = {
+            i = {
+                ['<C-u>'] = false,
+                ['<C-d>'] = false,
+                ['<C-k>'] = actions.move_selection_previous,
+                ['<C-j>'] = actions.move_selection_next,
+            },
+        },
+    },
 }
-
-pcall(require('telescope').load_extension, 'fzf')
-
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-
+--vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = '[P]roject [H]elp' })
+vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = '[P]roject [F]iles' })
+vim.keymap.set('n', '<leader>pb', builtin.buffers, { desc = '[P]roject [B]uffers' })
+vim.keymap.set('n', '<leader>pw', builtin.grep_string, { desc = '[P]roject by [W]ord' })
+vim.keymap.set('n', '<leader>pg', builtin.live_grep, { desc = '[P]roject by [G]rep' })
+vim.keymap.set('n', '<leader>pd', builtin.diagnostics, { desc = '[P]roject [D]iagnostics' })
+vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', function()
-	require('telescope.builtin').buffers(require('telescope.themes').get_dropdown {
-		previewer = false,
-		layout_config = {
-			height = 40,
-			width = 120,
-		},
-	})
+    builtin.buffers(themes.get_dropdown {
+        previewer = false,
+        layout_config = {
+            height = 40,
+            width = 120,
+        },
+    })
 end, { desc = '[ ] Find existing buffers' })
--- Note: setup corrent color for floats
 vim.keymap.set('n', '<leader>/', function()
-	require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-		previewer = false,
-		layout_config = {
-			height = 40,
-			width = 120,
-		},
-	})
+    builtin.current_buffer_fuzzy_find(themes.get_dropdown {
+        previewer = false,
+        layout_config = {
+            height = 40,
+            width = 120,
+        },
+    })
 end, { desc = '[/] Fuzzily search in current buffer]' })
-
-vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
-vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
-vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch by [W]ord' })
-vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [Diagnostics' })
