@@ -14,14 +14,11 @@ vim.api.nvim_set_option("signcolumn", "yes")
 vim.api.nvim_set_option("guicursor", "")
 vim.api.nvim_set_option("wrap", false)
 vim.api.nvim_set_option("scrolloff", 8)
--- vim.api.nvim_set_option("tabstop", 4)
--- vim.api.nvim_set_option("softtabstop", 4)
+vim.api.nvim_set_option("tabstop", 4)
+vim.api.nvim_set_option("softtabstop", 4)
+vim.api.nvim_set_option("shiftwidth", 4)
 vim.api.nvim_set_option("expandtab", true)
 vim.api.nvim_set_option("completeopt", "menuone,noselect")
 vim.api.nvim_set_option("termguicolors", true)
 vim.api.nvim_set_option("colorcolumn", "80")
 vim.api.nvim_set_option("clipboard", "unnamedplus")
-
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
