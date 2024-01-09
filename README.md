@@ -1,5 +1,7 @@
 # neovim
 
+neovim configuration for my personal usage
+
 ## install
 current local version v0.9.5
 ```bash
@@ -20,7 +22,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 #### lsp's
 ```bash
-# npm packages
+# npm packages; node version 20.10.0
 npm i -g vim-language-server \
     typescript \
     typescript-language-server \
@@ -37,7 +39,7 @@ npm i -g vim-language-server \
 # yarn packages
 yarn global add yaml-language-server
 
-# go packages
+# go packages; go version 1.21.5
 go install golang.org/x/tools/gopls@latest
 go install github.com/nametake/golangci-lint-langserver@latest
 go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
@@ -45,7 +47,7 @@ go install github.com/wader/jq-lsp@master
 go install github.com/dagger/cuelsp/cmd/cuelsp@latest
 vim ~/.bashrc # add this line: "export PATH=$PATH:/home/bogi/go/bin"
 
-# pip packages
+# pip packages; python version: 3.10, pip version:22.0.2
 pip install -U nginx-language-server
 
 # apt packages
