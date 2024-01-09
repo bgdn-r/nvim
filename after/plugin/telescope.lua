@@ -1,28 +1,28 @@
-local actions = require('telescope.actions')
+local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
 local themes = require("telescope.themes")
 
-require('telescope').setup {
+require("telescope").setup {
     defaults = {
         mappings = {
             i = {
-                ['<C-u>'] = false,
-                ['<C-d>'] = false,
-                ['<C-k>'] = actions.move_selection_previous,
-                ['<C-j>'] = actions.move_selection_next,
+                ["<C-u>"] = false,
+                ["<C-d>"] = false,
+                ["<C-k>"] = actions.move_selection_previous,
+                ["<C-j>"] = actions.move_selection_next,
             },
         },
     },
 }
 --vim.keymap.set("n", "<C-p>", builtin.git_files, {})
-vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = '[P]roject [H]elp' })
-vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = '[P]roject [F]iles' })
-vim.keymap.set('n', '<leader>pb', builtin.buffers, { desc = '[P]roject [B]uffers' })
-vim.keymap.set('n', '<leader>pw', builtin.grep_string, { desc = '[P]roject by [W]ord' })
-vim.keymap.set('n', '<leader>pg', builtin.live_grep, { desc = '[P]roject by [G]rep' })
-vim.keymap.set('n', '<leader>pd', builtin.diagnostics, { desc = '[P]roject [D]iagnostics' })
-vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] Find recently opened files' })
-vim.keymap.set('n', '<leader><space>', function()
+vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "[P]roject [H]elp" })
+vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "[P]roject [F]iles" })
+vim.keymap.set("n", "<leader>pb", builtin.buffers, { desc = "[P]roject [B]uffers" })
+vim.keymap.set("n", "<leader>pw", builtin.grep_string, { desc = "[P]roject by [W]ord" })
+vim.keymap.set("n", "<leader>pg", builtin.live_grep, { desc = "[P]roject by [G]rep" })
+vim.keymap.set("n", "<leader>pd", builtin.diagnostics, { desc = "[P]roject [D]iagnostics" })
+vim.keymap.set("n", "<leader>?", builtin.oldfiles, { desc = "[?] Find recently opened files" })
+vim.keymap.set("n", "<leader><space>", function()
     builtin.buffers(themes.get_dropdown {
         previewer = false,
         layout_config = {
@@ -30,8 +30,8 @@ vim.keymap.set('n', '<leader><space>', function()
             width = 120,
         },
     })
-end, { desc = '[ ] Find existing buffers' })
-vim.keymap.set('n', '<leader>/', function()
+end, { desc = "[ ] Find existing buffers" })
+vim.keymap.set("n", "<leader>/", function()
     builtin.current_buffer_fuzzy_find(themes.get_dropdown {
         previewer = false,
         layout_config = {
@@ -39,4 +39,4 @@ vim.keymap.set('n', '<leader>/', function()
             width = 120,
         },
     })
-end, { desc = '[/] Fuzzily search in current buffer]' })
+end, { desc = "[/] Fuzzily search in current buffer]" })
