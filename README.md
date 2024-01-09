@@ -62,7 +62,5 @@ vim ~/.bashrc # add this to line: "export PATH=$PATH:/home/bogi/.luals/bin"
 
 #### config
 ```bash
-mkdir ~/.config/nvim && cd ~/.config/nvim
-git clone git@github.com:bgdn-r/neovim.git
-mv neovim/* .
+cd ~/.config && git clone git@github.com/:bgdn-r/nvim.git
 ```
