@@ -14,12 +14,6 @@ sudo tar -xzvf nvim-linux64.tar.gz
 export PATH=$PATH:/home/bogi/nvim-linux64/bin
 ```
 
-#### packer
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
 #### lsp's
 ```bash
 # npm packages; node version 20.10.0
