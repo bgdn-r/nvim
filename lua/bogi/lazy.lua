@@ -14,8 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { "rose-pine/neovim",       name = "rose-pine" },
-    "nvim-lua/plenary.nvim",
+    { "nvim-lua/plenary.nvim" },
     {
         "nvim-telescope/telescope.nvim",
         dependencies = "nvim-lua/plenary.nvim",
@@ -39,11 +38,11 @@ require("lazy").setup({
             { "L3MON4D3/LuaSnip" },
         }
     },
-    "nvim-treesitter/nvim-treesitter",
-    "nvim-treesitter/playground",
-    "windwp/nvim-autopairs",
-    "numToStr/Comment.nvim",
-    "lewis6991/gitsigns.nvim",
+    { "nvim-treesitter/nvim-treesitter" },
+    { "nvim-treesitter/playground" },
+    { "windwp/nvim-autopairs" },
+    { "numToStr/Comment.nvim" },
+    { "lewis6991/gitsigns.nvim" },
     { "akinsho/toggleterm.nvim" },
     {
         "iamcco/markdown-preview.nvim",
@@ -51,7 +50,14 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    "lukas-reineke/indent-blankline.nvim",
-    { "folke/trouble.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
-    "tpope/vim-fugitive",
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    {
+        "folke/trouble.nvim",
+        dependencies = "nvim-tree/nvim-web-devicons",
+    },
+    { "tpope/vim-fugitive" },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+    },
 })
