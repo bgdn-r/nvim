@@ -14,6 +14,10 @@ require("telescope").setup {
         },
     },
 }
+
+vim.keymap.set("n", "<leader>ch", builtin.command_history, { desc = "[C]ommand [H]istory" })
+vim.keymap.set("n", "<leader>sh", builtin.search_history, { desc = "[S]earch [H]istory" })
+
 --vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "[P]roject [H]elp" })
 vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "[P]roject [F]iles" })
