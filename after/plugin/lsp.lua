@@ -91,7 +91,12 @@ require("lspconfig").tsserver.setup({})
 require("lspconfig").vimls.setup({})
 require("lspconfig").yamlls.setup({})
 require("lspconfig").pyright.setup({})
-
+local blackGroup = vim.api.nvim_create_augroup("Black", { clear = true })
+vim.api.nvim_create_autocmd("bufWritePost", {
+    pattern = "*.py",
+    command = "silent !black %",
+    group = blackGroup,
+})
 lsp_zero.setup()
 vim.diagnostic.config({
     virtual_text = true
