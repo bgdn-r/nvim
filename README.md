@@ -15,6 +15,7 @@ export PATH=$PATH:/home/bogi/nvim-linux64/bin
 ```
 
 #### lsp's
+> you can install lsp's directly or using Mason
 ```bash
 # npm packages; node version 20.10.0
 npm i -g vim-language-server \
