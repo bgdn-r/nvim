@@ -101,3 +101,5 @@ lsp_zero.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+require("lspconfig").rls.setup({})
+require("lspconfig").rust_analyzer.setup {}
