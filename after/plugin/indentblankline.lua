@@ -1,18 +1,18 @@
 local highlight = {
     "Love",
     "Gold",
+    "Pine",
+    "Iris",
     "Foam",
     "Text",
-    "Iris",
     "Rose",
-    "Pine",
 }
 
 local hooks = require "ibl.hooks"
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    vim.api.nvim_set_hl(0, "Foam", { fg = "#9ccfd8" })
     vim.api.nvim_set_hl(0, "Love", { fg = "#eb6f92" })
     vim.api.nvim_set_hl(0, "Gold", { fg = "#f6c177" })
-    vim.api.nvim_set_hl(0, "Foam", { fg = "#9ccfd8" })
     vim.api.nvim_set_hl(0, "Text", { fg = "#e0def4" })
     vim.api.nvim_set_hl(0, "Iris", { fg = "#c4a7e7" })
     vim.api.nvim_set_hl(0, "Rose", { fg = "#ebbcba" })
@@ -20,7 +20,8 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
 end)
 
 require("ibl").setup {
-    indent = { highlight = highlight },
-    scope = { enabled = false }
+    -- indent = { highlight = highlight },
+    scope = { highlight = highlight }
 }
+-- vim.g.rainbow_delimiters = { highlight = highlight }
 hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
