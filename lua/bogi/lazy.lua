@@ -24,12 +24,7 @@ require("lazy").setup({
         "VonHeikemen/lsp-zero.nvim",
         branch = "v3.x",
         dependencies = {
-            {
-                "williamboman/mason.nvim",
-                run = function()
-                    pcall(vim.cmd, "MasonUpdate")
-                end
-            },
+            { "williamboman/mason.nvim" },
             { "williamboman/mason-lspconfig.nvim" },
 
             { "neovim/nvim-lspconfig" },
