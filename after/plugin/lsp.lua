@@ -80,6 +80,8 @@ require("lspconfig").lua_ls.setup {
 require("lspconfig").nginx_language_server.setup({})
 require("lspconfig").sqls.setup({})
 require("lspconfig").templ.setup({})
+vim.filetype.add({ extension = { templ = "templ" } })
+require("lspconfig").html.setup({ filetypes = { "html", "templ" } })
 require("lspconfig").terraformls.setup({})
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = { "*.tf", "*.tfvars" },
@@ -91,6 +93,7 @@ require("lspconfig").tsserver.setup({})
 require("lspconfig").vimls.setup({})
 require("lspconfig").yamlls.setup({})
 require("lspconfig").pyright.setup({})
+require("lspconfig").templ.setup({})
 local blackGroup = vim.api.nvim_create_augroup("Black", { clear = true })
 vim.api.nvim_create_autocmd("bufWritePost", {
     pattern = "*.py",
