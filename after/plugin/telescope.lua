@@ -4,9 +4,9 @@ local themes = require("telescope.themes")
 
 require("telescope").setup {
     pickers = {
-        find_files = {
-            hidden = true,
-        },
+        -- find_files = {
+        --     hidden = true,
+        -- },
     },
     defaults = {
         mappings = {
@@ -22,10 +22,13 @@ require("telescope").setup {
 
 vim.keymap.set("n", "<leader>ch", builtin.command_history, { desc = "[C]ommand [H]istory" })
 vim.keymap.set("n", "<leader>sh", builtin.search_history, { desc = "[S]earch [H]istory" })
-
---vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "[P]roject [H]elp" })
+vim.keymap.set("n", "<leader>gi", builtin.lsp_, { desc = "[G]o to [I]mplementations" })
+vim.keymap.set("n", "<leader>gr", builtin.lsp_references, { desc = "[G]o to [R]eferences" })
 vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "[P]roject [F]iles" })
+vim.keymap.set("n", "<leader>pa", function()
+    builtin.find_files({ hidden = true })
+end, { desc = "[P]roject [F]iles" })
 vim.keymap.set("n", "<leader>pb", builtin.buffers, { desc = "[P]roject [B]uffers" })
 vim.keymap.set("n", "<leader>pw", builtin.grep_string, { desc = "[P]roject by [W]ord" })
 vim.keymap.set("n", "<leader>pg", builtin.live_grep, { desc = "[P]roject by [G]rep" })
