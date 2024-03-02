@@ -23,7 +23,7 @@ require("telescope").setup {
 vim.keymap.set("n", "<leader>ch", builtin.command_history, { desc = "[C]ommand [H]istory" })
 vim.keymap.set("n", "<leader>sh", builtin.search_history, { desc = "[S]earch [H]istory" })
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "[P]roject [H]elp" })
-vim.keymap.set("n", "<leader>gi", builtin.lsp_, { desc = "[G]o to [I]mplementations" })
+vim.keymap.set("n", "<leader>gi", builtin.lsp_implementations, { desc = "[G]o to [I]mplementations" })
 vim.keymap.set("n", "<leader>gr", builtin.lsp_references, { desc = "[G]o to [R]eferences" })
 vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "[P]roject [F]iles" })
 vim.keymap.set("n", "<leader>pa", function()
