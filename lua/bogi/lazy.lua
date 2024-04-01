@@ -45,7 +45,10 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl",           opts = {} },
+    { "junegunn/fzf",                        run = "./install --bin" },
+    { "junegunn/fzf/plugin/fzf.vim" },
+    { "nanotee/zoxide.vim" },
     {
         "folke/trouble.nvim",
         dependencies = "nvim-tree/nvim-web-devicons",

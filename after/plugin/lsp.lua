@@ -91,7 +91,9 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 require("lspconfig").tsserver.setup({})
 require("lspconfig").vimls.setup({})
-require("lspconfig").yamlls.setup({})
+require("lspconfig").yamlls.setup({
+    command = { "yaml-language-server", "--stdio" }
+})
 require("lspconfig").pyright.setup({})
 require("lspconfig").templ.setup({})
 local blackGroup = vim.api.nvim_create_augroup("Black", { clear = true })

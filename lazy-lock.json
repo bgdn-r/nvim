@@ -2,6 +2,8 @@
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "LuaSnip": { "branch": "master", "commit": "f3b3d3446bcbfa62d638b1903ff00a78b2b730a1" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "5af77f54de1b16c34b23cba810150689a3a90312" },
+  "fzf": { "branch": "master", "commit": "dff865239a0cdc79f33e97ec900b2bc8dd6517d2" },
+  "fzf.vim": { "branch": "master", "commit": "45d96c9cb1213204479593236dfabf911ff15443" },
   "gitsigns.nvim": { "branch": "main", "commit": "2c2463dbd82eddd7dbab881c3a62cfbfbe3c67ae" },
   "harpoon": { "branch": "harpoon2", "commit": "a38be6e0dd4c6db66997deab71fc4453ace97f9c" },
   "indent-blankline.nvim": { "branch": "master", "commit": "821a7acd88587d966f7e464b0b3031dfe7f5680c" },
@@ -22,5 +24,6 @@
   "toggleterm.nvim": { "branch": "main", "commit": "193786e0371e3286d3bc9aa0079da1cd41beaa62" },
   "trouble.nvim": { "branch": "main", "commit": "f1168feada93c0154ede4d1fe9183bf69bac54ea" },
   "undotree": { "branch": "master", "commit": "9dbbf3b7d19dda0d22ceca461818e4739ad8154d" },
-  "vim-fugitive": { "branch": "master", "commit": "011cf4fcb93a9649ffc6dcdff56ef948f5d0f7cc" }
+  "vim-fugitive": { "branch": "master", "commit": "011cf4fcb93a9649ffc6dcdff56ef948f5d0f7cc" },
+  "zoxide.vim": { "branch": "master", "commit": "b1e70b6fc1682a83929aee63680d2b43456fe9a5" }
 }
