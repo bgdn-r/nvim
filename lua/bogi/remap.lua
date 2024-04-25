@@ -19,6 +19,8 @@ vim.keymap.set('n', '<c-t>h', '<cmd>:ToggleTerm direction="horizontal"<CR>')
 vim.keymap.set({ 'n', 't' }, '<c-t><c-t>', '<cmd>:ToggleTerm<CR>')
 vim.keymap.set('n', '<c-t>v', '<cmd>:ToggleTerm direction="vertical" size=70<CR>')
 vim.keymap.set('n', '<c-t>h', '<cmd>:ToggleTerm direction="horizontal"<CR>')
+vim.keymap.set('n', '<leader>gp', '<cmd>:Gitsigns preview_hunk<CR>')
+vim.keymap.set('n', '<leader>gt', '<cmd>:Gitsigns toggle_current_line_blame<CR>')
 -- vim.keymap.set('v', "<leader>T", "[[:%s/\(.*\)/(\1);]]")
 function WrapLinesWithCommand()
     -- Prompt the user to enter a command
