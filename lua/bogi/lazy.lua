@@ -66,7 +66,11 @@ require("lazy").setup({
     {
         "mbbill/undotree"
     },
-    -- {
-    --     "github/copilot.vim"
-    -- }
+    {
+        "github/copilot.vim"
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    }
 })
