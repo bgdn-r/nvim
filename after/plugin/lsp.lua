@@ -78,7 +78,7 @@ require("lspconfig").lua_ls.setup {
     end
 }
 require("lspconfig").nginx_language_server.setup({})
-require("lspconfig").sqls.setup({})
+-- require("lspconfig").sqls.setup({})
 require("lspconfig").templ.setup({})
 vim.filetype.add({ extension = { templ = "templ" } })
 require("lspconfig").html.setup({ filetypes = { "html", "templ" } })
