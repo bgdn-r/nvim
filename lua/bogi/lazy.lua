@@ -58,6 +58,7 @@ require("lazy").setup({
         "rose-pine/neovim",
         name = "rose-pine",
     },
+    { 'projekt0n/github-nvim-theme' },
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
