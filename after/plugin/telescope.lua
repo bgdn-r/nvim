@@ -34,6 +34,7 @@ vim.keymap.set("n", "<leader>pw", builtin.grep_string, { desc = "[P]roject by [W
 vim.keymap.set("n", "<leader>pg", builtin.live_grep, { desc = "[P]roject by [G]rep" })
 vim.keymap.set("n", "<leader>pd", builtin.diagnostics, { desc = "[P]roject [D]iagnostics" })
 vim.keymap.set("n", "<leader>?", builtin.oldfiles, { desc = "[?] Find recently opened files" })
+vim.keymap.set("n", "<leader>gf", builtin.git_status, { desc = "[G]it [F]iles" })
 vim.keymap.set("n", "<leader><space>", function()
     builtin.buffers(themes.get_dropdown {
         previewer = false,
