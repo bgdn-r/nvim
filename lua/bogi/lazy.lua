@@ -45,9 +45,9 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl",           opts = {} },
-    { "junegunn/fzf",                        run = "./install --bin" },
-    { "junegunn/fzf/plugin/fzf.vim" },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    -- { "junegunn/fzf",                        run = "./install --bin" },
+    -- { "junegunn/fzf/plugin/fzf.vim" },
     { "nanotee/zoxide.vim" },
     {
         "folke/trouble.nvim",
@@ -59,11 +59,6 @@ require("lazy").setup({
         name = "rose-pine",
     },
     { 'projekt0n/github-nvim-theme' },
-    {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        dependencies = { "nvim-lua/plenary.nvim" }
-    },
     {
         "mbbill/undotree"
     },

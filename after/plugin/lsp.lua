@@ -108,3 +108,5 @@ vim.diagnostic.config({
 })
 require("lspconfig").rls.setup({})
 require("lspconfig").rust_analyzer.setup {}
+
+vim.lsp.set_log_level("OFF")
